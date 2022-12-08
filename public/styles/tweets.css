@@ -1,0 +1,52 @@
+article {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+    padding: 1.7em;
+    justify-content: space-between;
+    border: solid;
+    font-weight: 600;
+    background-color: #e4e4cc;
+}
+
+head {
+    display: flex;
+    flex-direction: row;
+}
+
+header .article header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+}
+i {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+.nickname {
+    margin-top: 0%;
+}
+.tweets {
+    display: flex;
+    width: 100%;
+    border-bottom: solid;
+    margin: 3px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+article:hover {
+    box-shadow: 0 10px 10px 0 #000000;
+}
+i:hover {
+    color: darkgoldenrod;
+}
+
+

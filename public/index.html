@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
     <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css">
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
@@ -33,7 +35,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
         <span>Tweeter</span>
-        <ul>
+        <ul class="nav menu">
           <p>Write a new tweet</p>
           <i class="fa fa-angle-double-down" ></i>
         </ul>
@@ -48,7 +50,7 @@
       </div>
   </header>
     <!-- Page-specific (main) content here -->
-    <main>
+    <main class="container">
       <section class="new-tweet">
         <h3>Compose Tweet</h3>
         <form method="POST" action="/tweets/">
@@ -58,10 +60,26 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>  
+      </section>
+      <article>
+        <div>
+          <i class="fa-regular fa-user">Name goes here</i>
+          <ul class="nickname">@DanJung</ul>
+        </div>
+          <div>
+            <p class="tweets">here goes the tweet</p>
+          </div>
+          <div>
+            <p class="time">here goes the time</p>
+            <div class="icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i> 
+            <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>  
+      </article> 
     </main>
     </body>
     <footer>
-
     </footer>
-</html>
+    </html>
