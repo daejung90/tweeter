@@ -15,10 +15,21 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #4a4954;
+  background-image:url("/images/brick-wall-dark.png");
+  font-family: "Source Sans Pro";
   font-size: 24px;
+  align-items: center;
+  justify-content: center;
 }
+
+main {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
