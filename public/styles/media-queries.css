@@ -2,6 +2,15 @@
     body {
       font-size: 32px;
     }
+    img.userimage {
+      margin-top: 120px;
+    }
+    ul.nav.menu {
+      margin-right: 20px;
+    }
+    span {
+      margin-left: 20px;
+    }
   }
   
   @media only screen and (min-width: 1025px) {
@@ -23,5 +32,6 @@
     .container {
       width: 60vw;
       padding-top: 50px;
+      margin-top: 120px;
     }
   }

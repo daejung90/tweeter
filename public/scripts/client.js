@@ -53,7 +53,6 @@ $( document ).ready(function() {
           .then(data => {
             renderTweets(data)
           })
-    
         // $.ajax('/tweets', { method: 'GET' })
         // .then(function (moreTweets) {
         //   renderTweets(moreTweets);

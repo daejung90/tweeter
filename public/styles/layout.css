@@ -27,16 +27,5 @@ main.container {
   height: 250px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  
-  
+  flex-direction: column; 
 }
-
-
-
-
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
