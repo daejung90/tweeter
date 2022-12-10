@@ -1,12 +1,5 @@
 $(document).ready(function() {
-    console.log("Loaded!")
 
-    // function openModalfor(element) {
-    //     alert('Okay');
-    // }
-    // $('div').on('click', function() {
-    //     openModalfor(this)
-    // });
 
     const totalChars = 140;                      //inital permitted chars number
 
