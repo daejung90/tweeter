@@ -7,58 +7,63 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-// const data = [
-//     {
-//       "user": {
-//         "name": "Newton",
-//         "avatars": "https://i.imgur.com/73hZDYK.png"
-//         ,
-//         "handle": "@SirIsaac"
-//       },
-//       "content": {
-//         "text": "If I have seen further it is by standing on the shoulders of giants"
-//       },
-//       "created_at": 1461116232227
-//     },
-//     {
-//       "user": {
-//         "name": "Descartes",
-//         "avatars": "https://i.imgur.com/nlhLi3I.png",
-//         "handle": "@rd" },
-//       "content": {
-//         "text": "Je pense , donc je suis"
-//       },
-//       "created_at": 1461113959088
-//     }
-//   ];
-
-$('#new-tweet').on('submit',function(event) {
+    $('form').on('submit',function(event) {
     event.preventDefault();
 
     const newTweetText = $('#tweet-text').val();
-    const tweetText = $(newTweetText).serialize();
 
-    $.post("/tweets", tweetText)
-        .done()
-})
+    if (newTweetText.length > 140) {
+        $('#error-container')
+          .text(`❗️Characters limit exceeded❗️`)
+          .slideDown('slow')
+          .addClass('unhide');
+      }
+  
+      if (newTweetText.length === 0) {
+        $('#error-container')
+          .text(`Share an idea 🖊️`)
+          .slideDown('slow')
+          .addClass('unhide');
+      }
+  
+      const tweetText = $(this).serialize();
+  
+      if (newTweetText.length > 0 && newTweetText.length <= 140) {
+        $.post("/tweets", tweetText)
+          .done(function() {
+            // Reset form and counter on successful post
+            $('#tweet-text').val('');
+            $('.counter').val(140);
+  
+            // Clear any error messages
+            $('#error-container')
+              .removeClass('unhide')
+              .slideUp('slow');
+  
+            // Refresh the tweet container
+            $('#tweets-container').empty();
+            loadTweets();
+          });
+        }
+      });
 
-const loadTweets = () => {
+      function loadTweets() {
 
-    $.get("/tweets")
-      .then(data => {
-        renderTweets(data)
-      })
-
-    // $.ajax('/tweets', { method: 'GET' })
-    // .then(function (moreTweets) {
-    //   renderTweets(moreTweets);
-    // })
-    // .catch((err) => {
-    //   console.log(err);
-    // });
-  }
-
-  loadTweets();
+        $.get("/tweets")
+          .then(data => {
+            renderTweets(data)
+          })
+    
+        // $.ajax('/tweets', { method: 'GET' })
+        // .then(function (moreTweets) {
+        //   renderTweets(moreTweets);
+        // })
+        // .catch((err) => {
+        //   console.log(err);
+        // });
+      }
+    
+      loadTweets();
 
 const renderTweets = function(tweets) {
     const $container = $('#tweets-container')
@@ -71,7 +76,12 @@ const renderTweets = function(tweets) {
 
 
 const createTweetElement = function (data) {
-    console.log(data)
+
+    const escape = function (str) {
+        let div = document.createElement("div");
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+      };
     const $tweet = `
     <article>
         <div>
@@ -80,7 +90,7 @@ const createTweetElement = function (data) {
         </div>
         <h4>${data.user.handle}</h4>
           <div>
-            <p class="tweets">${data.content.text}</p>
+          <p class="tweet-text">${escape(data.content.text)}</p>
           </div>
           <div>
           <p class="time">${timeago.format(data.created_at)}</p>
@@ -94,7 +104,7 @@ const createTweetElement = function (data) {
 
       return $tweet;
 }
-renderTweets(data)
+
 
 
 
