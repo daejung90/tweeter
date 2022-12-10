@@ -4,6 +4,7 @@
     <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta content-type="application/x-www-form-urlencoded">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -16,6 +17,8 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
     <link rel="stylesheet" href="/styles/footer.css" type="text/css">
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css">
+    <link rel="stylesheet" href="/styles/media-queries.css" type="text/css" />
+
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,13 +43,16 @@
           <i class="fa fa-angle-double-down" ></i>
         </ul>
     </nav>
-    <header>
+
+    <div class="wrapper">
+
+    <header class="main-header">
       <div class="profileimage">
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div class="name">
-          <h2>Your Name</h2>
+          <h2>Dan Jung</h2>
       </div>
   </header>
     <!-- Page-specific (main) content here -->
@@ -56,33 +62,16 @@
         <h3>Compose Tweet</h3>
         <form method="POST" action="/tweets/">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div>
+          <div class="buttoncounter">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
       <section id="tweets-container">
-      <!-- <article>
-        <div>
-          <i class="fa-regular fa-user">Name goes here</i>
-          <ul class="nickname">@DanJung</ul>
-        </div>
-          <div>
-            <p class="tweets">here goes the tweet</p>
-          </div>
-          <div>
-            <p class="time">here goes the time</p>
-            <div class="icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i> 
-            <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>  
-      </article>  -->
+      
     </section>
     </main>
-    <footer>
-    </footer>
-    </body>
-    </html>
+  </div>
+  </body>
+  </html>

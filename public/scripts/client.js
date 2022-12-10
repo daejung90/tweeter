@@ -95,7 +95,7 @@ const createTweetElement = function (data) {
           <div class="postedtweet">
           <p class="tweet-text">${escape(data.content.text)}</p>
           </div>
-          <div>
+          <div class="timeicon">
           <p class="time">${timeago.format(data.created_at)}</p>
             <div class="icons">
             <i class="fa-solid fa-flag"></i>

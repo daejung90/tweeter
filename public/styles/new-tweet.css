@@ -3,9 +3,11 @@
     align-items: center;
     width: 90%;
     margin: 80px;
+    margin-top: 0;
+    margin-bottom: 50px;
     justify-content: center;
-    
   }
+
     form {
     
     display: flex;
@@ -13,10 +15,6 @@
     flex-direction: column;
   }
 
-  .tweet-text {
-    display: flex;
-    align-items: flex-start;
-  }
   textarea {
     display: flex;
     font-size: 20px;
@@ -34,13 +32,26 @@
     justify-content: center;
     margin-bottom: 10px;
   }
+  .new-text {
+    margin-top: 30px;
+  }
+
+  .tweet-text {
+    display: flex;
+    align-items: flex-start;
+    
+  }
   
-  div {
+  div.profileimage {
     display: flex;
     border-top: 5px;
     justify-content: space-between;
   }
-
+  div.buttoncounter {
+    display: flex;
+    border-top: 5px;
+    justify-content: space-between;
+  }
   button {
     background-color: #4056A1;
     color: whitesmoke;
@@ -55,3 +66,5 @@
   .counter-negative {
     color: red;
   }
+
+  

@@ -2,7 +2,7 @@ article {
     display: flex;
     flex-direction: column;
     height: auto;
-    padding: 1.7em;
+    padding: 0.6em;
     justify-content: space-between;
     border: solid;
     font-weight: 600;
@@ -12,7 +12,10 @@ article {
 
 div.tweetpost {
     height: 80px;   
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    border-top: 5px;
+    justify-content: space-between;
 }
 ul {
     display: flex;
@@ -40,6 +43,11 @@ p.time {
 
 div.icons {
     margin: 10px;
+}
+
+div.timeicon {
+    display: flex;
+    justify-content: space-between;
 }
 
 i {

@@ -1,0 +1,27 @@
+@media only screen and (max-width: 1024px) {
+    body {
+      font-size: 32px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1500px;
+    }
+  
+    .main-header {
+      width: 30vw;
+      margin-top: 100px;
+      margin-left: 0;
+      height: 400px;
+      padding-top: 30px;
+    }
+  
+    .container {
+      width: 60vw;
+      padding-top: 50px;
+    }
+  }
