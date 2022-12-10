@@ -84,12 +84,15 @@ const createTweetElement = function (data) {
       };
     const $tweet = `
     <article>
-        <div>
-          <img src="${data.user.avatars}">
-          <h3>${data.user.name}</h3>
+        <div class="tweetpost">
+          <ul>
+           <img src="${data.user.avatars}">
+           <h4>${data.user.name}</h4>
+          </ul> 
+          <h5>${data.user.handle}</h5>
         </div>
-        <h4>${data.user.handle}</h4>
-          <div>
+        
+          <div class="postedtweet">
           <p class="tweet-text">${escape(data.content.text)}</p>
           </div>
           <div>
@@ -105,10 +108,4 @@ const createTweetElement = function (data) {
       return $tweet;
 }
 
-
-
-
-// const $tweet = createTweetElement(data[0]);
-// Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
 });

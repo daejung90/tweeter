@@ -1,6 +1,5 @@
 article {
     display: flex;
-    width: 90%;
     flex-direction: column;
     height: auto;
     padding: 1.7em;
@@ -8,39 +7,52 @@ article {
     border: solid;
     font-weight: 600;
     background-color: #e4e4cc;
+    margin-bottom: 18px;
 }
 
-head {
-    display: flex;
-    flex-direction: row;
+div.tweetpost {
+    height: 80px;   
+    margin-bottom: 50px;
 }
-
-header .article header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 ul {
     display: flex;
+    flex-direction: row;
     margin: 0%;
+    justify-content: space-between;
     padding: 0%;
+    align-items: center;
 }
+h4 {
+    margin-left: 15px;
+}
+
+h5 {
+    justify-content: flex-end;
+}
+div.postedtweet {
+    border-bottom: solid;
+}
+
+p.time {
+    margin-top: 10px;
+    font-size: medium;
+}
+
+div.icons {
+    margin: 10px;
+}
+
 i {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 25px;
 }
-.nickname {
-    margin-top: 0%;
+i.fa-solid.fa-flag {
+    margin-right: 10px;
 }
-.tweets {
-    display: flex;
-    width: 100%;
-    border-bottom: solid;
-    margin: 3px;
-    margin-top: 50px;
-    padding: 20px;
+i.fa-solid.fa-retweet {
+    margin-right: 10px;
 }
+
 
 article:hover {
     box-shadow: 0 10px 10px 0 #000000;

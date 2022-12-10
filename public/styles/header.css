@@ -8,15 +8,20 @@ header {
     
 }
 
-header div {
+.profileimage{
     margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.name {
+    
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-.name {
-    margin: 0px;
-}
+
 
 
